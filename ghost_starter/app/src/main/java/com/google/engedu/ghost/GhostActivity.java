@@ -85,14 +85,14 @@ public class GhostActivity extends ActionBarActivity {
             } else {
                 input = repre.substring(0,input.length()+1);
                 text.setText(input);
-                label.setText(repre);
+
 
             }
 
 
             // Do computer turn stuff then make it the user's turn again
             userTurn = true;
-            //label.setText(USER_TURN);
+
         }
     }
 
@@ -152,6 +152,21 @@ public class GhostActivity extends ActionBarActivity {
             label.setText("There is a a word starting with " + input + " that is " + repre + "  COMPUTER WINS!");
 
         }
+        }
+    }
+
+    public void onclickrestart(View view) {
+        input="";
+        Random r=new Random();
+        userTurn = r.nextBoolean();
+        TextView text = (TextView) findViewById(R.id.ghostText);
+        text.setText("");
+        TextView label = (TextView) findViewById(R.id.gameStatus);
+        if (userTurn) {
+            label.setText("New Round... "+USER_TURN);
+        } else {
+            label.setText("New Round... "+COMPUTER_TURN);
+            computerTurn();
         }
     }
 }

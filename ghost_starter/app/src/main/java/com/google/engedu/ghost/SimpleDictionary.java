@@ -44,6 +44,7 @@ public class SimpleDictionary implements GhostDictionary {
 
             for(String str: words){
                 if(str.startsWith(prefix)){
+
                     return str;
                 }
             }

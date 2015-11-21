@@ -45,7 +45,8 @@
         android:text="Restart"
         android:id="@+id/rstbtn"
         android:layout_alignTop="@+id/chbtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onclickrestart" />
 
 
 </RelativeLayout>
